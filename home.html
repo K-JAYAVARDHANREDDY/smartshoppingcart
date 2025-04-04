@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="welcome-message">
+                <h3>Hi, <span id="userName">User</span>!</h3>
+            </div>
+            <div class="user-info">
+                <button id="signOutBtn" class="sign-out-button">Sign Out</button>
+            </div>
+        </div>
+        <h1>Smart Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Item Total</th>
+                </tr>
+            </thead>
+            <tbody id="cartTable">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2">TOTAL ITEMS: <span id="totalItems">0</span></td>
+                    <td colspan="2">GRAND TOTAL: ₹<span id="totalAmount">0.00</span> INR</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
