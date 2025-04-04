@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Column widths */
+th:nth-child(1), td:nth-child(1) { width: 35%; }
+th:nth-child(2), td:nth-child(2) { width: 15%; }
+th:nth-child(3), td:nth-child(3) { width: 25%; }
+th:nth-child(4), td:nth-child(4) { width: 25%; }
+
+/* Row colors */
+tr[data-item="Sugar"] { background-color: #ffcdd2; }
+tr[data-item="Milk"] { background-color: #b3e5fc; }
+tr[data-item="Lays"] { background-color: #fff9c4; }
+tr[data-item="Book"] { background-color: #e0e0e0; }
+
+/* Total row */
+.total-row {
+    background-color: #4CAF50 !important;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.total-row td {
+    border: none;
+    padding: 15px 12px;
+}
+
+/* Total row alignment */
+.total-row td:first-child {
+    text-align: left;
+}
+
+.grand-total {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Remove borders from the last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Firebase status */
+#firebase-status {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}

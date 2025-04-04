@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Shopping Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Item Total</th>
+                </tr>
+            </thead>
+            <tbody id="cartTable">
+                <!-- Items will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="3">TOTAL ITEMS: <span id="totalItems">0</span></td>
+                    <td class="grand-total">GRAND TOTAL: ₹<span id="totalAmount">0.00</span> INR</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
